@@ -2,14 +2,18 @@
   "name": "example-localstorage-ports",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
+    "build": "./node_modules/elm/binwrappers/elm make ./src/Main.elm --output ./elm-app.js && webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "elm": "^0.18.0",
-    "elm-localstorage-ports": "^0.1.1"
+    "elm": "^0.18.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
   }
 }
